@@ -5,6 +5,8 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
@@ -14,6 +16,11 @@ import android.widget.TextView;
 
 import com.balysv.materialripple.MaterialRippleLayout;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.Iterator;
 import java.util.regex.Pattern;
 
 import thailand.company.riseplus.j2droidlib.R;
@@ -232,5 +239,65 @@ public class J2DroidTool {
         });
 
         dialog.show();
+    }
+
+    public static float convertDpToPixel(Context context, float dp){
+        Resources resources = context.getResources();
+        DisplayMetrics metrics = resources.getDisplayMetrics();
+        float px = dp * ((float)metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT);
+        return px;
+    }
+
+    public static float convertPixelsToDp(Context context, float px){
+        Resources resources = context.getResources();
+        DisplayMetrics metrics = resources.getDisplayMetrics();
+        float dp = px / ((float)metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT);
+        return dp;
+    }
+
+    public static String getErrorMessage(Activity context, JSONObject json){
+        try {
+            json = json.getJSONObject("errors");
+            Iterator<String> iterator = json.keys();
+            String messages = "";
+            int count = 1;
+
+            while (iterator.hasNext()) {
+                String key = iterator.next();
+                try {
+                    Object values = json.get(key);
+                    try {
+                        JSONArray jsonArray = new JSONArray(values.toString());
+
+                        for (int i=0; i<jsonArray.length(); i++){
+                            messages += count + ". " + key + " " + jsonArray.getString(i) + "\n";
+                            count ++;
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            return messages;
+        } catch (JSONException e) {
+            try {
+                String messages = "";
+                int count = 1;
+
+                JSONArray jsonArray = json.getJSONArray("errors");
+                for (int i=0; i<jsonArray.length(); i++){
+                    messages += count + ". " + jsonArray.getString(i) + "\n";
+                    count ++;
+                }
+
+                return messages;
+            } catch (JSONException e1) {
+                e1.printStackTrace();
+                return null;
+            }
+        }
     }
 }
