@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp">
+
+    <!-- title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbarNormalHeight"
+        android:gravity="center"
+        android:textSize="@dimen/textLargeSize"
+        android:textColor="@color/colorTextNormalBlack"
+        android:textStyle="bold"
+        android:text="title"
+        android:id="@+id/custom_information_dialog_title"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorDividerGray"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- information -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/custom_dialog_information"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:textSize="@dimen/textMediumSize"
+                    android:textColor="@color/colorTextNormalBlack"
+                    android:id="@+id/custom_information_dialog_content"/>
+
+                <!-- button -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/colorDividerGray"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/buttonHeight"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/custom_information_dialog_close_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:mrl_rippleColor="@color/colorRipple">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textSize="@dimen/textMediumSize"
+                            android:textColor="@color/colorTextNormalBlack"
+                            android:text="@string/close"
+                            android:id="@+id/custom_information_dialog_close_title"/>
+                    </com.balysv.materialripple.MaterialRippleLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
