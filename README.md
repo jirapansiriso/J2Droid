@@ -2,13 +2,13 @@
 allprojects { <br/>
 	&nbsp;&nbsp;&nbsp;repositories { <br/>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;... <br/>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maven { url  <br/>'https://jitpack.io' } <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maven { url 'https://jitpack.io' } <br/>
 	&nbsp;&nbsp;&nbsp;} <br/>
 } <br/>
 	
 <h3>Add the dependency</h3>
 dependencies { <br/>
-        &nbsp;&nbsp;&nbsp;implementation  <br/>'com.github.jirapansiriso:J2Droid:1.0' <br/>
+        &nbsp;&nbsp;&nbsp;implementation 'com.github.jirapansiriso:J2Droid:1.0' <br/>
 } <br/>
 
 <h3>Loading dialog</h3>
