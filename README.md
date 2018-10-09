@@ -2,132 +2,136 @@
 
 <h2>Install</h2>
 <h5>Add the JitPack repository to your build file</h5>
-allprojects { <br/>
-	&nbsp;&nbsp;&nbsp;repositories { <br/>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maven { url 'https://jitpack.io' } <br/>
-	&nbsp;&nbsp;&nbsp;} <br/>
-} <br/>
+<pre>
+allprojects { 
+   repositories { 
+      maven { url 'https://jitpack.io' } 
+   } 
+} 
+</pre>
 	
 <h5>Add the dependency</h5>
-dependencies { <br/>
-        &nbsp;&nbsp;&nbsp;implementation 'com.github.jirapansiriso:J2Droid:1.0' <br/>
-} <br/>
+<pre>
+dependencies { 
+   implementation 'com.github.jirapansiriso:J2Droid:1.0' 
+} 
+</pre>
 
 <h2>Tools</h2>
 <h5>Loading dialog</h5>
-J2DroidLoadingDialog loadingDialog = new J2DroidLoadingDialog(this, "Loading..."); <br/>
-loadingDialog.show(); // show loading dialog <br/>
-loadingDialog.dismiss(); // hide loading dialog <br/>
-
-<h5>Single click</h5>
-TextView click = (TextView) findViewById(R.id.click); <br/>
-click.setOnClickListener(new J2DroidOnSingleClickListener() { <br/>
-    &nbsp;&nbsp;&nbsp;@Override <br/>
-    &nbsp;&nbsp;&nbsp;public void onSingleClick(View v) { <br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// coding <br/>
-    &nbsp;&nbsp;&nbsp;} <br/>
-}); <br/>
+<pre>
+J2DroidLoadingDialog loadingDialog = new J2DroidLoadingDialog(this, "Loading..."); 
+loadingDialog.show(); // show loading dialog 
+loadingDialog.dismiss(); // hide loading dialog 
+</pre>
 
 <h5>Information dialog</h5>
+<pre>
 J2DroidTool.showInformationDialog(this, "Title", "Content");
+</pre>
 
 <h5>Http Connect</h5>
-/** Get request */ <br/>
-J2DroidRequest j2DroidRequest = new J2DroidRequest(); <br/>
-j2DroidRequest.setApiUrl("{API_URL}"); <br/>
-j2DroidRequest.setAccessToken("{ACCESS_TOKEN}"); <br/>
-j2DroidRequest.setRequestMethod(J2DroidRequest.GET); <br/> <br/>
+<pre>
+/** Get request */
+J2DroidRequest j2DroidRequest = new J2DroidRequest();
+j2DroidRequest.setApiUrl("{API_URL}");
+j2DroidRequest.setAccessToken("{ACCESS_TOKEN}");
+j2DroidRequest.setRequestMethod(J2DroidRequest.GET);
 
-boolean isLoadingVisible = true; <br/>
-String loadingTitle = "Loading..."; <br/>
-J2DroidConnection j2DroidConnection = new J2DroidConnection(this, isLoadingVisible, loadingTitle); <br/>
-j2DroidConnection.setProcessListener(new J2DroidConnection.ConnectionListener() { <br/>
-    &nbsp;&nbsp;&nbsp;@Override <br/>
-    &nbsp;&nbsp;&nbsp;public void onPreExecuted() { <br/>
+boolean isLoadingVisible = true;
+String loadingTitle = "Loading...";
+J2DroidConnection j2DroidConnection = new J2DroidConnection(this, isLoadingVisible, loadingTitle);
+j2DroidConnection.setProcessListener(new J2DroidConnection.ConnectionListener() {
+    @Override
+    public void onPreExecuted() {
 
-    &nbsp;&nbsp;&nbsp;} <br/>
+    }
 
-    &nbsp;&nbsp;&nbsp;@Override <br/>
-    &nbsp;&nbsp;&nbsp;public void onPostExecuted(String result) { <br/>
+    @Override
+    public void onPostExecuted(String result) {
 
-    &nbsp;&nbsp;&nbsp;} <br/>
-}); <br/>
-j2DroidConnection.execute(j2DroidRequest); <br/> <br>
+    }
+});
+j2DroidConnection.execute(j2DroidRequest);
 
-/** Post request */ <br/>
-J2DroidRequest j2DroidRequest = new J2DroidRequest(); <br/>
-j2DroidRequest.setApiUrl("{API_URL}"); <br/>
-j2DroidRequest.setAccessToken("{ACCESS_TOKEN}"); <br/>
-j2DroidRequest.setRequestBodyJson("{REQUEST_BODY_JSON}"); <br>
-j2DroidRequest.setRequestMethod(J2DroidRequest.POST); <br/> <br/>
+/** Post request */
+J2DroidRequest j2DroidRequest = new J2DroidRequest();
+j2DroidRequest.setApiUrl("{API_URL}");
+j2DroidRequest.setAccessToken("{ACCESS_TOKEN}");
+j2DroidRequest.setRequestMethod(J2DroidRequest.POST);
+j2DroidRequest.setRequestBodyJson("{REQUEST_BODY_JSON}");
 
-boolean isLoadingVisible = true; <br/>
-String loadingTitle = "Loading..."; <br/>
-J2DroidConnection j2DroidConnection = new J2DroidConnection(this, isLoadingVisible, loadingTitle); <br/>
-j2DroidConnection.setProcessListener(new J2DroidConnection.ConnectionListener() { <br/>
-    &nbsp;&nbsp;&nbsp;@Override <br/>
-    &nbsp;&nbsp;&nbsp;public void onPreExecuted() { <br/>
+boolean isLoadingVisible = true;
+String loadingTitle = "Loading...";
+J2DroidConnection j2DroidConnection = new J2DroidConnection(this, isLoadingVisible, loadingTitle);
+j2DroidConnection.setProcessListener(new J2DroidConnection.ConnectionListener() {
+    @Override
+    public void onPreExecuted() {
 
-    &nbsp;&nbsp;&nbsp;} <br/>
+    }
 
-    &nbsp;&nbsp;&nbsp;@Override <br/>
-    &nbsp;&nbsp;&nbsp;public void onPostExecuted(String result) { <br/>
+    @Override
+    public void onPostExecuted(String result) {
 
-    &nbsp;&nbsp;&nbsp;} <br/>
-}); <br/>
-j2DroidConnection.execute(j2DroidRequest); <br/> <br>
+    }
+});
+j2DroidConnection.execute(j2DroidRequest);
 
-/** Post with file request */ <br/>
-J2DroidRequest j2DroidRequest = new J2DroidRequest(); <br/>
-j2DroidRequest.setApiUrl("{API_URL}"); <br/>
-j2DroidRequest.setAccessToken("{ACCESS_TOKEN}"); <br/>
-j2DroidRequest.setFile(new File("FILE")); <br>
-j2DroidRequest.setFileKeyRequest("TABLE[COLUMN]"); <br>
-j2DroidRequest.setRequestMethod(J2DroidRequest.POST_WITH_FILE); <br/> <br/>
+/** Post with file request */
+J2DroidRequest j2DroidRequest = new J2DroidRequest();
+j2DroidRequest.setApiUrl("{API_URL}");
+j2DroidRequest.setAccessToken("{ACCESS_TOKEN}");
+j2DroidRequest.setRequestMethod(J2DroidRequest.POST_WITH_FILE);
+j2DroidRequest.setFile(new File("FILE"));
+j2DroidRequest.setFileKeyRequest("TABLE[COLUMN]");
 
-boolean isLoadingVisible = true; <br/>
-String loadingTitle = "Loading..."; <br/>
-J2DroidConnection j2DroidConnection = new J2DroidConnection(this, isLoadingVisible, loadingTitle); <br/>
-j2DroidConnection.setProcessListener(new J2DroidConnection.ConnectionListener() { <br/>
-    &nbsp;&nbsp;&nbsp;@Override <br/>
-    &nbsp;&nbsp;&nbsp;public void onPreExecuted() { <br/>
+boolean isLoadingVisible = true;
+String loadingTitle = "Loading...";
+J2DroidConnection j2DroidConnection = new J2DroidConnection(this, isLoadingVisible, loadingTitle);
+j2DroidConnection.setProcessListener(new J2DroidConnection.ConnectionListener() {
+    @Override
+    public void onPreExecuted() {
 
-    &nbsp;&nbsp;&nbsp;} <br/>
+    }
 
-    &nbsp;&nbsp;&nbsp;@Override <br/>
-    &nbsp;&nbsp;&nbsp;public void onPostExecuted(String result) { <br/>
+    @Override
+    public void onPostExecuted(String result) {
 
-    &nbsp;&nbsp;&nbsp;} <br/>
-}); <br/>
-j2DroidConnection.execute(j2DroidRequest); <br/> <br>
+    }
+});
+j2DroidConnection.execute(j2DroidRequest);
 
-/** Delete request */ <br/>
-J2DroidRequest j2DroidRequest = new J2DroidRequest(); <br/>
-j2DroidRequest.setApiUrl("{API_URL}"); <br/>
-j2DroidRequest.setAccessToken("{ACCESS_TOKEN}"); <br/>
-j2DroidRequest.setRequestMethod(J2DroidRequest.DELETE); <br/> <br/>
+/** Delete request */
+J2DroidRequest j2DroidRequest = new J2DroidRequest();
+j2DroidRequest.setApiUrl("{API_URL}");
+j2DroidRequest.setAccessToken("{ACCESS_TOKEN}");
+j2DroidRequest.setRequestMethod(J2DroidRequest.DELETE);
 
-boolean isLoadingVisible = true; <br/>
-String loadingTitle = "Loading..."; <br/>
-J2DroidConnection j2DroidConnection = new J2DroidConnection(this, isLoadingVisible, loadingTitle); <br/>
-j2DroidConnection.setProcessListener(new J2DroidConnection.ConnectionListener() { <br/>
-    &nbsp;&nbsp;&nbsp;@Override <br/>
-    &nbsp;&nbsp;&nbsp;public void onPreExecuted() { <br/>
+boolean isLoadingVisible = true;
+String loadingTitle = "Loading...";
+J2DroidConnection j2DroidConnection = new J2DroidConnection(this, isLoadingVisible, loadingTitle);
+j2DroidConnection.setProcessListener(new J2DroidConnection.ConnectionListener() {
+    @Override
+    public void onPreExecuted() {
 
-    &nbsp;&nbsp;&nbsp;} <br/>
+    }
 
-    &nbsp;&nbsp;&nbsp;@Override <br/>
-    &nbsp;&nbsp;&nbsp;public void onPostExecuted(String result) { <br/>
+    @Override
+    public void onPostExecuted(String result) {
 
-    &nbsp;&nbsp;&nbsp;} <br/>
-}); <br/>
-j2DroidConnection.execute(j2DroidRequest); <br/>
+    }
+});
+j2DroidConnection.execute(j2DroidRequest);
+</pre>
 
 <h5>Others</h5>
-J2DroidTool.hideSoftKeyboard(this); <br/>
-J2DroidTool.isEmail(new EditText(this)); <br/>
-J2DroidTool.isFindNumber(new EditText(this)); <br/>
-J2DroidTool.isFindSpecialSymbol(new EditText(this)); <br/>
-J2DroidTool.isNumberOnly(new EditText(this)); <br/>
-J2DroidTool.isTextNull(new EditText(this)); <br/>
+<pre>
+J2DroidTool.hideSoftKeyboard(this);
+J2DroidTool.isEmail(new EditText(this));
+J2DroidTool.isFindNumber(new EditText(this));
+J2DroidTool.isFindSpecialSymbol(new EditText(this));
+J2DroidTool.isNumberOnly(new EditText(this));
+J2DroidTool.isTextNull(new EditText(this));
+</pre>
+
 </body>
