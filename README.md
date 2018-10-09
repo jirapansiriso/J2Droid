@@ -1,3 +1,16 @@
+<h3>Add the JitPack repository to your build file</h3>
+allprojects {
+	&nbsp;&nbsp;&nbsp;repositories {
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maven { url 'https://jitpack.io' }
+	&nbsp;&nbsp;&nbsp;}
+} <br/>
+	
+<h3>Add the dependency</h3>
+dependencies {
+        &nbsp;&nbsp;&nbsp;implementation 'com.github.jirapansiriso:J2Droid:1.0'
+} <br/>
+
 <h3>Loading dialog</h3>
 J2DroidLoadingDialog loadingDialog = new J2DroidLoadingDialog(this, "Loading..."); <br/>
 loadingDialog.show(); // show loading dialog <br/>
