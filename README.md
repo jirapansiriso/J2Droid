@@ -44,12 +44,9 @@ J2DroidConnection j2DroidConnection = new J2DroidConnection(this, isLoadingVisib
 j2DroidConnection.setProcessListener(new J2DroidConnection.ConnectionListener() {
     @Override
     public void onPreExecuted() {
-
     }
-
     @Override
     public void onPostExecuted(String result) {
-
     }
 });
 j2DroidConnection.execute(j2DroidRequest);
@@ -67,12 +64,9 @@ J2DroidConnection j2DroidConnection = new J2DroidConnection(this, isLoadingVisib
 j2DroidConnection.setProcessListener(new J2DroidConnection.ConnectionListener() {
     @Override
     public void onPreExecuted() {
-
     }
-
     @Override
     public void onPostExecuted(String result) {
-
     }
 });
 j2DroidConnection.execute(j2DroidRequest);
@@ -91,12 +85,9 @@ J2DroidConnection j2DroidConnection = new J2DroidConnection(this, isLoadingVisib
 j2DroidConnection.setProcessListener(new J2DroidConnection.ConnectionListener() {
     @Override
     public void onPreExecuted() {
-
     }
-
     @Override
     public void onPostExecuted(String result) {
-
     }
 });
 j2DroidConnection.execute(j2DroidRequest);
@@ -113,12 +104,9 @@ J2DroidConnection j2DroidConnection = new J2DroidConnection(this, isLoadingVisib
 j2DroidConnection.setProcessListener(new J2DroidConnection.ConnectionListener() {
     @Override
     public void onPreExecuted() {
-
     }
-
     @Override
     public void onPostExecuted(String result) {
-
     }
 });
 j2DroidConnection.execute(j2DroidRequest);
