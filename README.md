@@ -9,7 +9,11 @@ allprojects {
    } 
 } 
 </pre>
+<<<<<<< HEAD
     
+=======
+	
+>>>>>>> 935712c1dec0e21aff831302b4c6ef273e8017b8
 <h5>Add the dependency</h5>
 <pre>
 dependencies { 
@@ -108,7 +112,7 @@ j2DroidConnection.setProcessListener(new J2DroidConnection.ConnectionListener() 
     @Override
     public void onPreExecuted() {
     }
-
+    
     @Override
     public void onPostExecuted(String result) {
     }
