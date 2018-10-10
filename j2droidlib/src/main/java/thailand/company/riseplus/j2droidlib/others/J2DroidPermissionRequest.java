@@ -16,6 +16,7 @@ public class J2DroidPermissionRequest {
     public static final int WRITE_EXTERNAL_PERMISSION = 3;
     public static final int CAMERA_PERMISSION = 4;
     public static final int CALL_PHONE_PERMISSION = 5;
+    public static final int READ_AND_WRITE_EXTERNAL_PERMISSION = 6;
 
     private static J2DroidPermissionRequest instance;
     private J2DroidPermissionListener listener;
@@ -60,6 +61,11 @@ public class J2DroidPermissionRequest {
         }else if(type == CALL_PHONE_PERMISSION){
             ArrayList<String> permissions = new ArrayList<>();
             permissions.add(Manifest.permission.CALL_PHONE);
+            return permissions;
+        }else if(type == READ_AND_WRITE_EXTERNAL_PERMISSION){
+            ArrayList<String> permissions = new ArrayList<>();
+            permissions.add(Manifest.permission.READ_EXTERNAL_STORAGE);
+            permissions.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
             return permissions;
         }else {
             return null;

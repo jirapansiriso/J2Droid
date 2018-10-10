@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.net.ConnectivityManager;
+import android.net.wifi.WifiManager;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.Window;
@@ -20,11 +22,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.lang.reflect.Method;
+import java.net.InetAddress;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
 import thailand.company.riseplus.j2droidlib.R;
 
+import static android.content.Context.CONNECTIVITY_SERVICE;
 import static android.content.Context.INPUT_METHOD_SERVICE;
 
 public class J2DroidTool {
@@ -298,6 +303,41 @@ public class J2DroidTool {
                 e1.printStackTrace();
                 return null;
             }
+        }
+    }
+
+    public static boolean isWifiEnabled(Context context){
+        WifiManager wifi = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+        return wifi.isWifiEnabled();
+    }
+
+    public static boolean isMobileDataEnabled(Context context){
+        Object connectivityService = context.getSystemService(CONNECTIVITY_SERVICE);
+        ConnectivityManager cm = (ConnectivityManager) connectivityService;
+
+        try {
+            Class<?> c = Class.forName(cm.getClass().getName());
+            Method m = c.getDeclaredMethod("getMobileDataEnabled");
+            m.setAccessible(true);
+            return (Boolean)m.invoke(cm);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    private static boolean isNetworkConnected(Context context) {
+        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        return cm.getActiveNetworkInfo() != null;
+    }
+
+    public static boolean isInternetAvailable() {
+        try {
+            InetAddress ipAddr = InetAddress.getByName("google.com");
+            return !ipAddr.equals("");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
         }
     }
 }

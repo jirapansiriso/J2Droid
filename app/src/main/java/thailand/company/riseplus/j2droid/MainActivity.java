@@ -26,12 +26,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /** Loading dialog */
+//        /** Loading dialog */
 //         J2DroidLoadingDialog loadingDialog = new J2DroidLoadingDialog(this, "Loading...");
 //         loadingDialog.show(); // show loading dialog
 //         loadingDialog.dismiss(); // hide loading dialog
-
-        /** Single click */
+//
+//        /** Single click */
 //        TextView click = (TextView) findViewById(R.id.click);
 //        click.setOnClickListener(new J2DroidOnSingleClickListener() {
 //            @Override
@@ -39,56 +39,11 @@ public class MainActivity extends AppCompatActivity {
 //
 //            }
 //        });
-
-        /** Information dialog */
+//
+//        /** Information dialog */
 //         J2DroidTool.showInformationDialog(this, "Title", "Content");
-
-        /** Get request */
-//        J2DroidRequest j2DroidRequest = new J2DroidRequest();
-//        j2DroidRequest.setApiUrl("{API_URL}");
-//        j2DroidRequest.setAccessToken("{ACCESS_TOKEN}");
-//        j2DroidRequest.setRequestMethod(J2DroidRequest.GET);
 //
-//        boolean isLoadingVisible = true;
-//        String loadingTitle = "Loading...";
-//        J2DroidConnection j2DroidConnection = new J2DroidConnection(this, isLoadingVisible, loadingTitle);
-//        j2DroidConnection.setProcessListener(new J2DroidConnection.ConnectionListener() {
-//            @Override
-//            public void onPreExecuted() {
-//
-//            }
-//
-//            @Override
-//            public void onPostExecuted(String result) {
-//
-//            }
-//        });
-//        j2DroidConnection.execute(j2DroidRequest);
-
-        /** Post request */
-//        J2DroidRequest j2DroidRequest = new J2DroidRequest();
-//        j2DroidRequest.setApiUrl("{API_URL}");
-//        j2DroidRequest.setAccessToken("{ACCESS_TOKEN}");
-//        j2DroidRequest.setRequestMethod(J2DroidRequest.POST);
-//        j2DroidRequest.setRequestBodyJson("{REQUEST_BODY_JSON}");
-//
-//        boolean isLoadingVisible = true;
-//        String loadingTitle = "Loading...";
-//        J2DroidConnection j2DroidConnection = new J2DroidConnection(this, isLoadingVisible, loadingTitle);
-//        j2DroidConnection.setProcessListener(new J2DroidConnection.ConnectionListener() {
-//            @Override
-//            public void onPreExecuted() {
-//
-//            }
-//
-//            @Override
-//            public void onPostExecuted(String result) {
-//
-//            }
-//        });
-//        j2DroidConnection.execute(j2DroidRequest);
-
-        /** Post with file request */
+//        /** Post with file request */
 //        J2DroidRequest j2DroidRequest = new J2DroidRequest();
 //        j2DroidRequest.setApiUrl("{API_URL}");
 //        j2DroidRequest.setAccessToken("{ACCESS_TOKEN}");
@@ -111,38 +66,16 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 //        j2DroidConnection.execute(j2DroidRequest);
-
-        /** Delete request */
-//        J2DroidRequest j2DroidRequest = new J2DroidRequest();
-//        j2DroidRequest.setApiUrl("{API_URL}");
-//        j2DroidRequest.setAccessToken("{ACCESS_TOKEN}");
-//        j2DroidRequest.setRequestMethod(J2DroidRequest.DELETE);
 //
-//        boolean isLoadingVisible = true;
-//        String loadingTitle = "Loading...";
-//        J2DroidConnection j2DroidConnection = new J2DroidConnection(this, isLoadingVisible, loadingTitle);
-//        j2DroidConnection.setProcessListener(new J2DroidConnection.ConnectionListener() {
-//            @Override
-//            public void onPreExecuted() {
-//
-//            }
-//
-//            @Override
-//            public void onPostExecuted(String result) {
-//
-//            }
-//        });
-//        j2DroidConnection.execute(j2DroidRequest);
-
-        /** Others */
+//        /** Others */
 //        J2DroidTool.hideSoftKeyboard(this);
 //        J2DroidTool.isEmail(new EditText(this));
 //        J2DroidTool.isFindNumber(new EditText(this));
 //        J2DroidTool.isFindSpecialSymbol(new EditText(this));
 //        J2DroidTool.isNumberOnly(new EditText(this));
 //        J2DroidTool.isTextNull(new EditText(this));
-
-        /** Confirm dialog */
+//
+//        /** Confirm dialog */
 //        J2DroidConfirmDialog j2DroidConfirmDialog = new J2DroidConfirmDialog(this, "Title", "Content", "Yes", "Cancel");
 //        j2DroidConfirmDialog.setListener(new J2DroidConfirmDialog.J2DroidConfirmDialogListener() {
 //            @Override
@@ -156,9 +89,9 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 //        j2DroidConfirmDialog.show();
-
-
-        /** Permission */
+//
+//
+//        /** Permission */
 //        J2DroidPermissionRequest
 //                .getInstance(this)
 //                .permissionRequest(J2DroidPermissionRequest.CALL_PHONE_PERMISSION)
