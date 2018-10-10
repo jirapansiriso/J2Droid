@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 //        /** Loading dialog */
-//         J2DroidLoadingDialog loadingDialog = new J2DroidLoadingDialog(this, "Loading...");
-//         loadingDialog.show(); // show loading dialog
-//         loadingDialog.dismiss(); // hide loading dialog
+//        J2DroidLoadingDialog loadingDialog = new J2DroidLoadingDialog(this, "Loading...");
+//        loadingDialog.show(); // show loading dialog
+//        loadingDialog.dismiss(); // hide loading dialog
 //
 //        /** Single click */
 //        TextView click = (TextView) findViewById(R.id.click);
