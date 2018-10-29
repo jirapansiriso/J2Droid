@@ -13,7 +13,7 @@
 <h5>Add the dependency</h5>
 <pre>
         dependencies { 
-           implementation 'com.github.jirapansiriso:J2Droid:1.0' 
+           implementation 'com.github.jirapansiriso:J2Droid:1.1' 
         } 
 </pre>
 
