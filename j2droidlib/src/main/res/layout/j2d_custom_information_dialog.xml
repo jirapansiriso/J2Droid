@@ -10,10 +10,10 @@
     <!-- title -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/toolbarNormalHeight"
+        android:layout_height="@dimen/j2dToolbarNormalHeight"
         android:gravity="center"
-        android:textSize="@dimen/textLargeSize"
-        android:textColor="@color/colorTextNormalBlack"
+        android:textSize="@dimen/j2dTextLargeSize"
+        android:textColor="@color/j2dColorTextNormalBlack"
         android:textStyle="bold"
         android:text="title"
         android:id="@+id/custom_information_dialog_title"/>
@@ -21,7 +21,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/colorDividerGray"/>
+        android:background="@color/j2dColorDividerGray"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -44,8 +44,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="20dp"
-                    android:textSize="@dimen/textMediumSize"
-                    android:textColor="@color/colorTextNormalBlack"
+                    android:textSize="@dimen/j2dTextMediumSize"
+                    android:textColor="@color/j2dColorTextNormalBlack"
                     android:id="@+id/custom_information_dialog_content"/>
 
                 <!-- button -->
@@ -53,24 +53,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="30dp"
-                    android:background="@color/colorDividerGray"/>
+                    android:background="@color/j2dColorDividerGray"/>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/buttonHeight"
+                    android:layout_height="@dimen/j2dButtonHeight"
                     android:gravity="center"
                     android:orientation="horizontal">
                     <com.balysv.materialripple.MaterialRippleLayout
                         android:id="@+id/custom_information_dialog_close_button"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:mrl_rippleColor="@color/colorRipple">
+                        app:mrl_rippleColor="@color/j2dColorRipple">
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:textSize="@dimen/textMediumSize"
-                            android:textColor="@color/colorTextNormalBlack"
-                            android:text="@string/close"
+                            android:textSize="@dimen/j2dTextMediumSize"
+                            android:textColor="@color/j2dColorTextNormalBlack"
+                            android:text="@string/j2dClose"
                             android:id="@+id/custom_information_dialog_close_title"/>
                     </com.balysv.materialripple.MaterialRippleLayout>
                 </LinearLayout>

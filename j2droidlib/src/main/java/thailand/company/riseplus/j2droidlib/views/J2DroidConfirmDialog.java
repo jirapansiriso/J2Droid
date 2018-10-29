@@ -3,9 +3,6 @@ package thailand.company.riseplus.j2droidlib.views;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Build;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -44,7 +41,7 @@ public class J2DroidConfirmDialog {
     private void init(){
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
 
-        View view = ((Activity) context).getLayoutInflater().inflate(R.layout.custom_confirm_dialog, null);
+        View view = ((Activity) context).getLayoutInflater().inflate(R.layout.j2d_custom_confirm_dialog, null);
         layout = (LinearLayout) view.findViewById(R.id.custom_confirm_dialog_layout);
         TextView titleText = (TextView) view.findViewById(R.id.custom_dialog_title);
         TextView contentText = (TextView) view.findViewById(R.id.custom_dialog_confirm_body);

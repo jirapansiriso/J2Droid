@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:textColor="@color/colorTextNormalWhite"
-        android:textSize="@dimen/textMediumSize"
+        android:textColor="@color/j2dColorTextNormalWhite"
+        android:textSize="@dimen/j2dTextMediumSize"
         android:id="@+id/dialog_loading_title"/>
 </LinearLayout>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="textMediumSize">16dp</dimen>
-    <dimen name="textLargeSize">18dp</dimen>
-    <dimen name="toolbarNormalHeight">50dp</dimen>
-    <dimen name="buttonHeight">50dp</dimen>
+    <dimen name="j2dTextMediumSize">16dp</dimen>
+    <dimen name="j2dTextLargeSize">18dp</dimen>
+    <dimen name="j2dToolbarNormalHeight">50dp</dimen>
+    <dimen name="j2dButtonHeight">50dp</dimen>
 </resources>

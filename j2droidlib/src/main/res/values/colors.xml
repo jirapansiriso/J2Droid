@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorTextNormalWhite">#ffffff</color>
-    <color name="colorTextNormalBlack">#292929</color>
-    <color name="colorDividerGray">#f1f1f1</color>
-    <color name="colorRipple">#e7e7e7</color>
+    <color name="j2dColorTextNormalWhite">#ffffff</color>
+    <color name="j2dColorTextNormalBlack">#292929</color>
+    <color name="j2dColorDividerGray">#f1f1f1</color>
+    <color name="j2dColorRipple">#e7e7e7</color>
 </resources>

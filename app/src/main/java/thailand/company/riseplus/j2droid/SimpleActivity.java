@@ -2,29 +2,15 @@ package thailand.company.riseplus.j2droid;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
 
-import java.io.File;
-
-import thailand.company.riseplus.j2droidlib.connections.J2DroidConnection;
-import thailand.company.riseplus.j2droidlib.connections.J2DroidRequest;
-import thailand.company.riseplus.j2droidlib.others.J2DroidOnSingleClickListener;
-import thailand.company.riseplus.j2droidlib.others.J2DroidPermissionRequest;
-import thailand.company.riseplus.j2droidlib.others.J2DroidTool;
-import thailand.company.riseplus.j2droidlib.views.J2DroidConfirmDialog;
-import thailand.company.riseplus.j2droidlib.views.J2DroidLoadingDialog;
-
-public class MainActivity extends AppCompatActivity {
+public class SimpleActivity extends AppCompatActivity {
 
     private static final String TAG = "log_main";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_simple);
 
 //        /** Loading dialog */
 //        J2DroidLoadingDialog loadingDialog = new J2DroidLoadingDialog(this, "Loading...");

@@ -11,13 +11,13 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center_vertical"
-        android:textSize="@dimen/textLargeSize"
-        android:textColor="@color/colorTextNormalBlack"
+        android:textSize="@dimen/j2dTextLargeSize"
+        android:textColor="@color/j2dColorTextNormalBlack"
         android:id="@+id/custom_dialog_title"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/colorDividerGray"/>
+        android:background="@color/j2dColorDividerGray"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,8 +29,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center_vertical"
-            android:textSize="@dimen/textMediumSize"
-            android:textColor="@color/colorTextNormalBlack"
+            android:textSize="@dimen/j2dTextMediumSize"
+            android:textColor="@color/j2dColorTextNormalBlack"
             android:id="@+id/custom_dialog_confirm_body"/>
 
         <!-- button -->
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="30dp"
-            android:background="@color/colorDividerGray"/>
+            android:background="@color/j2dColorDividerGray"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="45dp"
@@ -50,14 +50,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:mrl_rippleColor="@color/colorRipple">
+                app:mrl_rippleColor="@color/j2dColorRipple">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:textSize="@dimen/textMediumSize"
-                    android:textColor="@color/colorTextNormalBlack"
-                    android:text="@string/close"
+                    android:textSize="@dimen/j2dTextMediumSize"
+                    android:textColor="@color/j2dColorTextNormalBlack"
+                    android:text="@string/j2dClose"
                     android:id="@+id/custom_dialog_confirm_no_text"/>
             </com.balysv.materialripple.MaterialRippleLayout>
             <com.balysv.materialripple.MaterialRippleLayout
@@ -65,14 +65,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:mrl_rippleColor="@color/colorRipple">
+                app:mrl_rippleColor="@color/j2dColorRipple">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:textSize="@dimen/textMediumSize"
-                    android:textColor="@color/colorTextNormalBlack"
-                    android:text="@string/yes"
+                    android:textSize="@dimen/j2dTextMediumSize"
+                    android:textColor="@color/j2dColorTextNormalBlack"
+                    android:text="@string/j2dYes"
                     android:id="@+id/custom_dialog_confirm_yes_text"/>
             </com.balysv.materialripple.MaterialRippleLayout>
         </LinearLayout>

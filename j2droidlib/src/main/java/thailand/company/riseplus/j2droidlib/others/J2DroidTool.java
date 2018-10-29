@@ -227,7 +227,7 @@ public class J2DroidTool {
         final Dialog dialog = new Dialog(activity);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setCancelable(true);
-        dialog.setContentView(R.layout.custom_information_dialog);
+        dialog.setContentView(R.layout.j2d_custom_information_dialog);
 
         LinearLayout layout = (LinearLayout) dialog.findViewById(R.id.custom_dialog_information);
         TextView title = (TextView) dialog.findViewById(R.id.custom_information_dialog_title);

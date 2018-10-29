@@ -33,7 +33,7 @@ public class J2DroidLoadingDialog {
     private void init(){
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
 
-        View view = ((Activity) context).getLayoutInflater().inflate(R.layout.dialog_loading, null);
+        View view = ((Activity) context).getLayoutInflater().inflate(R.layout.j2d_dialog_loading, null);
         layout = (LinearLayout) view.findViewById(R.id.dialog_loading_view);
         titleText = (TextView) view.findViewById(R.id.dialog_loading_title);
 
@@ -51,7 +51,7 @@ public class J2DroidLoadingDialog {
             // layout.setBackground(context.getResources().getDrawable(R.drawable.black_background));
         }else{
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                layout.setBackground(context.getResources().getDrawable(R.drawable.background_loading));
+                layout.setBackground(context.getResources().getDrawable(R.drawable.j2d_background_loading));
             }
         }
     }
